@@ -1,2 +1,93 @@
 pandas
 python-dotenv
+🚀 Data Pipeline Dashboard
+📌 Overview
+This project is a full-stack data pipeline application that allows users to upload CSV files, process them through a data pipeline, and download the transformed output via a web interface.
+It combines:
+Backend: Python (Flask)
+Data Processing: Pandas-based pipeline
+Frontend: HTML, CSS, JavaScript
+🏗️ Project Architecture
+Frontend (HTML/CSS/JS)
+
+⬇
+
+Flask API (app.py)
+
+⬇
+
+Pipeline Service (pipeline_service.py)
+
+⬇
+
+Processed Output (CSV)
+⚙️ Features
+📁 Upload CSV file
+👀 Preview data (frontend)
+🔄 Run data pipeline
+🧹 Data validation, cleaning, transformation
+📥 Download processed output
+⚡ Dynamic and user-driven execution
+📂 Project Structure
+DataDemoo/
+│
+├── data/
+│   ├── input/        # Uploaded files
+│   └── output/       # Processed files
+│
+├── processing/       # Cleaning, transformation, validation
+├── storage/          # File writing logic
+├── factory/          # Loader factory
+├── config/           # Configurations
+│
+├── pipeline_service.py   # Core pipeline logic
+├── app.py                # Flask backend
+├── Main.py               # CLI execution (optional)
+│
+├── templates/
+│   └── index.html        # Frontend UI
+│
+├── static/
+│   ├── style.css
+│   └── script.js
+│
+├── requirements.txt
+└── README.md
+🔄 Pipeline Flow
+Load data
+Validate data
+Clean data (handle nulls, etc.)
+Transform data
+Save output file
+Pipeline logic is implemented in pipeline_service.py
+▶️ How to Run
+1. Install dependencies
+pip install -r requirements.txt
+2. Start the application
+python app.py
+3. Open in browser
+http://127.0.0.1:5000
+📤 How to Use
+Upload a CSV file
+Click Run Pipeline
+Download the processed output
+🧪 Sample Data Generator
+You can generate sample data using:
+python generate_data.py
+This creates random CSV files for testing
+🧠 Design Highlights
+Modular pipeline architecture
+Factory pattern for loaders
+Separation of concerns (processing, storage, config)
+Dynamic file handling via API
+🚀 Future Improvements
+📊 Data visualization dashboard
+📜 Real-time pipeline logs
+☁️ Cloud integration (AWS / Azure / Databricks)
+🔐 Authentication & user management
+⚛️ React-based frontend
+👨‍💻 Author
+Adesh Bhosale , Daniyal Azmi
+💡 Summary
+This project demonstrates how to build a scalable and modular data engineering pipeline with a user-friendly interface, similar to real-world data platforms.
+ 
